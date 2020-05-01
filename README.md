@@ -63,7 +63,7 @@ Note : If you need more info, contact jobytchacko@gmail.com .
 - So, the ribbon will distribute the calls to the multiple instances.
 
 ### Eurekan Naming Server
-- As you have see earlier, the calls are mode using http request only you have to specify the URL in the application or service to make another call. This will not help if you want to add multiple instances once application is deployed. Here, you need to add the URI each time you deploy anther instance of the microservice
+- As you have seen earlier, the calls are made using http request only. you have to specify the URL in the application or service to make another call. This will not help if you want to add multiple instances once application is deployed. Here, you need to add the URI each time you deploy anther instance of the microservice
 - We user Eureka Naming Server. This will register all the instances when it is deployed if EurekaDiscovery is enabled in the microservices
 - Configuration for Naming Server 
 - Dependencies - Eureka Server 
@@ -74,7 +74,7 @@ Note : If you need more info, contact jobytchacko@gmail.com .
 - Add the URL of the Eureka server in the configuration file as follows. This format may change as per the versions eureka.client.serviceUrl.defaultZone=http://localhost:8671/eureka
 - This will make the micro service to register with Eureka and could be discovered through the application name of the service
 
-### API Gateway
+### API Gateway - Netflix Zuul
 - This will help us to implement the common functionalities for different Micro services like Authorisation, Logging, Service Aggregation etc.
 - All the requests will be forwarded to the gateway and then it will go to the corresponding service or application
 - We can implement a filter and do the things needed to do before sending request to the corresponding service
